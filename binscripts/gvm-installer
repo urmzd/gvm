@@ -112,7 +112,7 @@ if [ -z "$GVM_NO_UPDATE_PROFILE" ] ; then
     update_profile "$HOME/.zshrc"
   fi
   if [ "$(uname)" == "Linux" ]; then
-    update_profile "$HOME/.bashrc" || update_profile "$HOME/.bash_profile"
+    update_profile "$HOME/.zshrc" || update_profile "$HOME/.zsh_profile"
   elif [ "$(uname)" == "Darwin" ]; then
     LOGIN_SHELL=$(finger $(id -u -n) | grep Shell | cut -d : -f 3)
     echo "macOS detected. User shell is:" $LOGIN_SHELL
